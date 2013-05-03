@@ -21,7 +21,7 @@ namespace Web_Application
             //Call the search class / refinement.
 
             //Redirect to the result page.
-            Response.Redirect("s_results.aspx?topic="+topic+"#!/page_results", true);
+            Response.Redirect("s_results.aspx?topic="+topic+Hidden1.Value+"#!/page_results", true);
         }
 
         //Just an example of method. Probably won't be in this class, but in the search class.
@@ -41,6 +41,12 @@ namespace Web_Application
                     + "posuere cubilia Curae; Aenean malesuadravida dolor nec accumsan. Fusce tincidunt odio ac sem laoreet nec rhoncus lacus consectetur?"
                     + "Nunc a pellentesque mi. Mauris ullamcorper scelerisque nulla a facilisis. Nunc id tellus dui. Donec ultricies gravida fringilla. "
                     + "Suspendisse cursus pretium eleifentudin, diam id lacinia bibendum, diam ligula feugiat felis, at porttitor.";
+        }
+
+        protected void tile_Click(object sender, EventArgs e)
+        {
+            string s = "teste";
+            TxtB_Input.Text = s;
         }
 
     }

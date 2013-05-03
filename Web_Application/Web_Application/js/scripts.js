@@ -185,7 +185,8 @@ function ON_LOAD() {
         });
 
 
-        if (getCookie("loadpage") == null) {
+        if (getCookie("loadpage") == null)
+        {
             setCookie("loadpage", "true");
             ////////// show site //////////////
             var _delay = 1800;
