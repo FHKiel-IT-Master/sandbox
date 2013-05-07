@@ -10,13 +10,13 @@
                                 <asp:Literal ID="SearchTopic" runat="server"></asp:Literal>
                                <div class="rel">
                                         <div class="scroll" style="height:330px">
-                                            <asp:Literal ID="ResultsLiteral" runat="server"></asp:Literal>     
+                                            <asp:Literal ID="ResultsLiteral" runat="server"></asp:Literal>    
                                         </div>
                                         <div class="scrollBtns">
                                             <a href="#" class="scrollUp"><span></span></a>
                                             <a href="#" class="scrollDown"><span></span></a>
                                         </div>
-                                    </div>  
+                                  </div>  
                             </div>
                         </div>
                     </div>

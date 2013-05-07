@@ -11,7 +11,28 @@ namespace Web_Application
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //Here the connector to the database comes into play.
+                //It will output an array of strings containing the "structure"
+                //Here is just an example
 
+                string[] ctxs = new String[10];
+                ctxs[0] = "News"; ctxs[1] = "Sports"; ctxs[2] = "Music"; ctxs[3] = "Person"; ctxs[4] = "Country"; ctxs[5] = "Technology";
+                ctxs[6] = "University"; ctxs[7] = "Clubs"; ctxs[8] = "Party"; ctxs[9] = "Magazines";
+
+                LoadContext(ctxs);
+            }
+
+        }
+
+        //Receives a array of strings to dynamically insert HTML into the contexts div
+        protected void LoadContext(string[] ctx)
+        {
+            for (int i = 0; i < ctx.Length; i++)
+            {
+                contexts.InnerHtml += "<input id='tl_" + ctx[i] + "' type='button' value='" + ctx[i] + "' class='btn_tile' onclick='context_clicked(this.value)'/>";
+            }
         }
 
         protected void Btn_Search_Click(object sender, EventArgs e)
@@ -42,12 +63,5 @@ namespace Web_Application
                     + "Nunc a pellentesque mi. Mauris ullamcorper scelerisque nulla a facilisis. Nunc id tellus dui. Donec ultricies gravida fringilla. "
                     + "Suspendisse cursus pretium eleifentudin, diam id lacinia bibendum, diam ligula feugiat felis, at porttitor.";
         }
-
-        protected void tile_Click(object sender, EventArgs e)
-        {
-            string s = "teste";
-            TxtB_Input.Text = s;
-        }
-
     }
 }

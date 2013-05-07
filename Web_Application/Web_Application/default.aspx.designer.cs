@@ -22,6 +22,15 @@ namespace Web_Application {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Hidden1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden Hidden1;
+        
+        /// <summary>
         /// TxtB_Input control.
         /// </summary>
         /// <remarks>
@@ -40,12 +49,12 @@ namespace Web_Application {
         protected global::System.Web.UI.WebControls.Button Btn_Search;
         
         /// <summary>
-        /// Hidden1 control.
+        /// contexts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden Hidden1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contexts;
     }
 }
