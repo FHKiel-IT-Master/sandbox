@@ -17,10 +17,12 @@ namespace Web_Application
             }
             else
             {
+                //Get the Search instance for that session
+                Search srch = Session["SearchObj"] as Search;
+
                 SearchTopic.Text = "<h3> You searched for:" + Request["topic"] + "</h3>";
-                ResultsLiteral.Text = "<p>" + _default.GetResults() + "</p>";
+                ResultsLiteral.Text = "<p>" + srch.GetResults() + "</p>";
             }
         }
-
     }
 }
