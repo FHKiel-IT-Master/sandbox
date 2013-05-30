@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31DB2E3E-1F29-4D11-BC7E-F556E79799D8}</ProjectGuid>
+    <ProjectGuid>{51A90D42-0AEA-41A6-9BC5-75855D23A442}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SearchSystem</RootNamespace>
-    <AssemblyName>RequestHandler</AssemblyName>
+    <RootNamespace>Bing</RootNamespace>
+    <AssemblyName>BingConnector</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,20 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
-    <Compile Include="Handler.cs" />
-    <Compile Include="Operands.cs" />
+    <Compile Include="BingSearchContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BingSearchConnector\SearchSystem.csproj">
-      <Project>{b8a4ae5e-ed54-493a-b2c0-6d0f94ab2371}</Project>
-      <Name>SearchSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.sqlproj">
-      <Project>{aeaccfb4-912b-48ad-b5f4-069dc9e8a304}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
